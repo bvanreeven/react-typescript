@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": false,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "noLib": false,
+    "jsx": "react",
+    "outDir": "./temp"
+  },
+  "files": [
+    "app/app.tsx"
+  ]
+}
