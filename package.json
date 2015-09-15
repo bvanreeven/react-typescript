@@ -8,10 +8,11 @@
   },
   "devDependencies": {
     "browserify": "^11.1.0",
+    "mkdirp": "^0.5.1",
     "typescript": "^1.6.0-beta"
   },
   "scripts": {
-    "build": "mkdir -p public/js/app && node_modules/.bin/tsc && node_modules/.bin/browserify ./temp/app.js -o public/js/app/bundle.js",
+    "build": "mkdirp public/js/app && tsc && browserify ./temp/app.js -o public/js/app/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
