@@ -1,7 +1,8 @@
 {
   "name": "react-typescript",
   "version": "1.0.0",
-  "description": "",
+  "description": "Minimal boilerplate for a single-page app using React, TypeScript with JSX (TSX), and Visual Studio Code.",
+  "repository": "bvanreeven/react-typescript",
   "main": "index.js",
   "dependencies": {
     "react": "^0.13.3"
@@ -9,12 +10,12 @@
   "devDependencies": {
     "browserify": "^11.1.0",
     "mkdirp": "^0.5.1",
-    "typescript": "^1.6.0-beta"
+    "typescript": "^1.6.2"
   },
   "scripts": {
     "build": "mkdirp public/js/app && tsc && browserify ./temp/app.js -o public/js/app/bundle.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "http-server"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Benny van Reeven",
+  "license": "MIT"
 }
