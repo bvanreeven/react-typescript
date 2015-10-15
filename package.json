@@ -1,10 +1,12 @@
 {
-  "name": "react-typescript",
+  "name": "mobservable-react-typescript",
   "version": "1.0.0",
   "description": "Minimal boilerplate for a single-page app using React, TypeScript with JSX (TSX), and Visual Studio Code.",
-  "repository": "bvanreeven/react-typescript",
+  "repository": "mweststrate/mobservable-react-typescript",
   "main": "index.js",
   "dependencies": {
+    "mobservable": "^1.0.0",
+    "mobservable-react": "^1.0.1",
     "react": "^0.13.3"
   },
   "devDependencies": {
