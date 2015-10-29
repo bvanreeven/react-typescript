@@ -2,12 +2,16 @@
   "name": "mobservable-react-typescript",
   "version": "1.0.0",
   "description": "Minimal boilerplate for a single-page app using React, TypeScript with JSX (TSX), and Visual Studio Code.",
-  "repository": "mweststrate/mobservable-react-typescript",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mweststrate/mobservable-react-typescript.git"
+  },
   "main": "index.js",
   "dependencies": {
     "mobservable": "^1.0.0",
-    "mobservable-react": "^1.0.1",
-    "react": "^0.13.3"
+    "mobservable-react": "^2.0.0",
+    "react": "^0.14",
+    "react-dom": "^0.14"
   },
   "devDependencies": {
     "browserify": "^11.1.0",
@@ -18,6 +22,6 @@
     "build": "mkdirp public/js/app && tsc && browserify ./temp/app.js -o public/js/app/bundle.js",
     "start": "http-server"
   },
-  "author": "Benny van Reeven",
+  "author": "Michel Weststrate",
   "license": "MIT"
 }

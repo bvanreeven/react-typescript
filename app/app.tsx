@@ -1,6 +1,7 @@
-/// <reference path="../typings/react/react.d.ts" />
+/// <reference path="../typings/tsd.d.ts" />
 
 import React = require('react');
+import ReactDOM = require('react-dom');
 import {observable} from 'mobservable';
 import {observer} from 'mobservable-react';
 
@@ -39,7 +40,7 @@ class Timer extends React.Component<{}, {}> {
 }
 
 function render() {
-  React.render(
+  ReactDOM.render(
     <Demo name="World" />,
     document.getElementById('app')
   );
