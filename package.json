@@ -21,7 +21,7 @@
     "typescript": "^1.6.2"
   },
   "scripts": {
-    "build": "browserify src/index.tsx -p tsify > public/js/bundle.js",
+    "build": "browserify src/index.tsx -p tsify -o public/js/bundle.js",
     "start": "cd public && http-server -o index.html"
   },
   "author": "Michel Weststrate",
