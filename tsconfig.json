@@ -8,9 +8,9 @@
     "experimentalDecorators": true,
     "noLib": false,
     "jsx": "react",
-    "outDir": "./temp"
+    "outDir": "dist"
   },
   "files": [
-    "app/app.tsx"
+    "src/index.tsx"
   ]
 }

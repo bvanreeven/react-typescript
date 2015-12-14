@@ -5,6 +5,8 @@ import ReactDOM = require('react-dom');
 import {observable} from 'mobservable';
 import {observer} from 'mobservable-react';
 
+import "mobservable-react-devtools";
+
 class DemoProps {
   public name: string;
 }

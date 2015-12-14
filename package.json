@@ -8,19 +8,21 @@
   },
   "main": "index.js",
   "dependencies": {
-    "mobservable": "^1.0.0",
-    "mobservable-react": "^2.0.0",
+    "mobservable": "^1.1.4",
+    "mobservable-react": "^2.1.0",
+    "mobservable-react-devtools": "^2.0.4",
     "react": "^0.14",
     "react-dom": "^0.14"
   },
   "devDependencies": {
     "browserify": "^11.1.0",
-    "mkdirp": "^0.5.1",
+    "http-server": "^0.8.5",
+    "tsify": "^0.13.1",
     "typescript": "^1.6.2"
   },
   "scripts": {
-    "build": "mkdirp public/js/app && tsc && browserify ./temp/app.js -o public/js/app/bundle.js",
-    "start": "http-server"
+    "build": "browserify src/index.tsx -p tsify > public/js/bundle.js",
+    "start": "cd public && http-server -o index.html"
   },
   "author": "Michel Weststrate",
   "license": "MIT"
