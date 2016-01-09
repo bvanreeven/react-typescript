@@ -5,12 +5,13 @@
   "repository": "bvanreeven/react-typescript",
   "main": "index.js",
   "dependencies": {
-    "react": "^0.13.3"
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6"
   },
   "devDependencies": {
-    "browserify": "^11.1.0",
+    "browserify": "^13.0.0",
     "mkdirp": "^0.5.1",
-    "typescript": "^1.6.2"
+    "typescript": "^1.7.5"
   },
   "scripts": {
     "build": "mkdirp public/js/app && tsc && browserify ./temp/app.js -o public/js/app/bundle.js",

@@ -1,6 +1,8 @@
 /// <reference path="../typings/react/react.d.ts" />
+/// <reference path="../typings/react/react-dom.d.ts" />
 
 import React = require('react');
+import ReactDOM = require('react-dom');
 
 class DemoProps {
   public name: string;
@@ -18,7 +20,7 @@ class Demo extends React.Component<DemoProps, any> {
 }
 
 function render() {
-  React.render(
+  ReactDOM.render(
     <Demo name="World" />,
     document.getElementById('app')
   );
