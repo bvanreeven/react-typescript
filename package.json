@@ -1,29 +1,39 @@
 {
-  "name": "mobservable-react-typescript",
+  "name": "mobx-react-typescript-boilerplate",
   "version": "1.0.0",
-  "description": "Minimal boilerplate for a single-page app using React, TypeScript with JSX (TSX), and Visual Studio Code.",
+  "description": "Boilerplate for MobX + React project with Typescript, ES6 compilation and hot code reloading",
+  "scripts": {
+    "start": "node server.js"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mweststrate/mobservable-react-typescript.git"
+    "url": "https://github.com/mobxjs/mobx-react-typescript-boilerplate.git"
   },
-  "main": "index.js",
-  "dependencies": {
-    "mobservable": "^1.1.4",
-    "mobservable-react": "^2.1.0",
-    "mobservable-react-devtools": "^2.0.4",
-    "react": "^0.14",
-    "react-dom": "^0.14"
+  "keywords": [
+    "react",
+    "reactjs",
+    "boilerplate",
+    "mobx",
+    "starter-kit"
+  ],
+  "author": "Michel Weststrate <mweststrate@gmail.com> (http://github.com/mweststrate)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mobxjs/mobx/issues"
   },
+  "homepage": "http://mobxjs.github.com/mobx",
   "devDependencies": {
-    "browserify": "^11.1.0",
-    "http-server": "^0.8.5",
-    "tsify": "^0.13.1",
-    "typescript": "^1.6.2"
+    "react-hot-loader": "^1.2.7",
+    "ts-loader": "^0.8.1",
+    "typescript": "^1.8.2",
+    "webpack": "^1.9.6",
+    "webpack-dev-server": "^1.8.2"
   },
-  "scripts": {
-    "build": "browserify src/index.tsx -p tsify -o public/js/bundle.js",
-    "start": "cd public && http-server -o index.html"
-  },
-  "author": "Michel Weststrate",
-  "license": "MIT"
+  "dependencies": {
+    "mobx": "^2.0.0",
+    "mobx-react": "^3.0.0",
+    "mobx-react-devtools": "^4.0.0",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0"
+  }
 }

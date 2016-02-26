@@ -1,51 +1,42 @@
-/// <reference path="../typings/tsd.d.ts" />
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import {observable} from 'mobx';
+import {observer} from 'mobx-react';
 
-import React = require('react');
-import ReactDOM = require('react-dom');
-import {observable} from 'mobservable';
-import {observer} from 'mobservable-react';
+declare var require;
+const DevTools = require('mobx-react-devtools').default; // Use import see #6, add typings
 
-import "mobservable-react-devtools";
-
-class DemoProps {
-  public name: string;
+class AppState {
+    @observable timer = 0;
+    
+    constructor() {
+        setInterval(() => {
+            appState.timer += 1;
+        }, 1000);
+    }
+    
+    resetTimer() {
+        this.timer = 0;
+    }
 }
-
-class Demo extends React.Component<DemoProps, any> {
-  constructor(props: DemoProps) {
-    super(props);
-  }
-  render() {
-    return (
-      <div>
-        <div>Hello {this.props.name}!</div>
-        <Timer/>
-      </div>
-    );
-  }
-}
-
-
-var timerState = observable({
-  secondsPassed: 0
-});
-
-setInterval(() => timerState.secondsPassed++, 1000);
 
 @observer
-class Timer extends React.Component<{}, {}> {
-  render() {
-    return (
-      <span>Seconds passed: {timerState.secondsPassed}</span>
-    )
-  }
-}
+class TimerView extends React.Component<{appState: AppState}, {}> {
+     render() {
+        return (
+            <div>
+                <button onClick={this.onReset}>
+                    Seconds passed: {this.props.appState.timer}
+                </button>
+                <DevTools />
+            </div>
+        );
+     }
 
-function render() {
-  ReactDOM.render(
-    <Demo name="World" />,
-    document.getElementById('app')
-  );
-}
+     onReset = () => {
+     	this.props.appState.resetTimer();
+     }
+};
 
-render();
+const appState =  new AppState();
+ReactDOM.render(<TimerView appState={appState} />, document.getElementById('root'));

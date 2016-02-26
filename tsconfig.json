@@ -10,7 +10,8 @@
     "jsx": "react",
     "outDir": "dist"
   },
-  "files": [
-    "src/index.tsx"
+  "exclude": [
+    "node_modules",
+    "static"
   ]
 }
