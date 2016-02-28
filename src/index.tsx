@@ -11,7 +11,7 @@ class AppState {
     
     constructor() {
         setInterval(() => {
-            appState.timer += 1;
+            this.timer += 1;
         }, 1000);
     }
     
