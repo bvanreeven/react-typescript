@@ -2,9 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {observable} from 'mobx';
 import {observer} from 'mobx-react';
-
-declare var require;
-const DevTools = require('mobx-react-devtools').default; // Use import see #6, add typings
+import DevTools from 'mobx-react-devtools';
 
 class AppState {
     @observable timer = 0;
@@ -22,7 +20,7 @@ class AppState {
 
 @observer
 class TimerView extends React.Component<{appState: AppState}, {}> {
-     render() {
+    render() {
         return (
             <div>
                 <button onClick={this.onReset}>
@@ -34,7 +32,7 @@ class TimerView extends React.Component<{appState: AppState}, {}> {
      }
 
      onReset = () => {
-     	this.props.appState.resetTimer();
+         this.props.appState.resetTimer();
      }
 };
 
