@@ -11,6 +11,7 @@
   "devDependencies": {
     "@types/react": "^0.14.39",
     "@types/react-dom": "^0.14.17",
+    "concurrently": "^3.1.0",
     "mkdirp": "^0.5.1",
     "source-map-loader": "^0.1.5",
     "ts-loader": "^0.9.0",
@@ -19,7 +20,8 @@
   },
   "scripts": {
     "build": "webpack",
-    "start": "http-server"
+    "start": "http-server",
+    "dev": "concurrently --kill-others --prefix [{name}] --names WEBPACK,HTTP \"webpack -wd\" \"http-server\""
   },
   "author": "Benny van Reeven",
   "license": "MIT"
