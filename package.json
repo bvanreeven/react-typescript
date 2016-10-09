@@ -5,8 +5,8 @@
   "repository": "bvanreeven/react-typescript",
   "main": "index.js",
   "dependencies": {
-    "react": "^0.14.6",
-    "react-dom": "^0.14.6"
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
   },
   "devDependencies": {
     "browserify": "^13.0.0",
