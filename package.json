@@ -11,12 +11,14 @@
   "devDependencies": {
     "@types/react": "^0.14.39",
     "@types/react-dom": "^0.14.17",
-    "browserify": "^13.0.0",
     "mkdirp": "^0.5.1",
-    "typescript": "^2.0.3"
+    "source-map-loader": "^0.1.5",
+    "ts-loader": "^0.9.0",
+    "typescript": "^2.0.3",
+    "webpack": "^1.13.2"
   },
   "scripts": {
-    "build": "mkdirp public/js/app && tsc && browserify ./temp/app.js -o public/js/app/bundle.js",
+    "build": "webpack",
     "start": "http-server"
   },
   "author": "Benny van Reeven",
