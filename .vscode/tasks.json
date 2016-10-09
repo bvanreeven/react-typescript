@@ -7,7 +7,7 @@
         "command": ".\\node_modules\\.bin\\tsc"
     },
     "isShellCommand": true,
-    "args": ["-w", "--noEmit", "-p", "."],
+    "args": ["-w"],
     "showOutput": "silent",
     "isWatching": true,
     "problemMatcher": "$tsc-watch"
