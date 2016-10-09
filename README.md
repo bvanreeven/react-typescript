@@ -5,9 +5,7 @@ Minimal boilerplate for a single-page app using React, TypeScript with JSX suppo
 Usage:
 
 * Install Node.js
-* `npm install -g tsd`
 * `npm install`
-* `tsd install`
 * `npm run build`
 
 To view the app:

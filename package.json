@@ -9,6 +9,8 @@
     "react-dom": "^15.3.2"
   },
   "devDependencies": {
+    "@types/react": "^0.14.39",
+    "@types/react-dom": "^0.14.17",
     "browserify": "^13.0.0",
     "mkdirp": "^0.5.1",
     "typescript": "^2.0.3"
