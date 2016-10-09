@@ -11,7 +11,7 @@
   "devDependencies": {
     "browserify": "^13.0.0",
     "mkdirp": "^0.5.1",
-    "typescript": "^1.7.5"
+    "typescript": "^2.0.3"
   },
   "scripts": {
     "build": "mkdirp public/js/app && tsc && browserify ./temp/app.js -o public/js/app/bundle.js",
