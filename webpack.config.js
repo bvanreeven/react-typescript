@@ -13,12 +13,16 @@ module.exports = {
     publicPath: '/static/'
   },
   resolve: {
-    extensions: ['', '.js', '.ts', '.tsx']
+    extensions: ['.js', '.ts', '.tsx']
   },
   module: {
     loaders: [{
       test: /\.tsx?$/,
-      loaders: ['awesome-typescript-loader'],
+      use: [
+        {
+          loader: "awesome-typescript-loader"
+        },
+      ],
       include: path.join(__dirname, 'src')
     }]
   }
