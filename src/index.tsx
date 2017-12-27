@@ -36,5 +36,5 @@ class TimerView extends React.Component<{appState: AppState}, {}> {
      }
 };
 
-const appState =  new AppState();
+const appState = new AppState();
 ReactDOM.render(<TimerView appState={appState} />, document.getElementById('root'));
