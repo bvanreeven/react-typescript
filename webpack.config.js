@@ -3,6 +3,7 @@ var webpack = require('webpack');
 
 module.exports = {
   devtool: 'eval',
+  mode: 'development',
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
     './src/index'
@@ -16,13 +17,9 @@ module.exports = {
     extensions: ['.js', '.ts', '.tsx']
   },
   module: {
-    loaders: [{
+    rules: [{
       test: /\.tsx?$/,
-      use: [
-        {
-          loader: "awesome-typescript-loader"
-        },
-      ],
+      loader: "awesome-typescript-loader",
       include: path.join(__dirname, 'src')
     }]
   }
